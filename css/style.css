@@ -46,6 +46,62 @@ button {
   margin-right: auto;
 }
 
+.backdrop_service {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.modal {
+  width: 528px;
+  height: 581px;
+  background-color: var(--color-white);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.12),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.close_button {
+  width: 30px;
+  height: 30px;
+  background-color: var(--white-font);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  padding: 6px 6px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.close_button:hover,
+.close_button:focus {
+  fill: var(--brand-color);
+  cursor: pointer;
+}
+
 .icono_web {
   color: var(--brand-color);
   text-decoration: none;
